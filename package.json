@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration production && cp static.json dist/my-anime-app2/browser",
+    "build": "ng build --configuration production && cp src/static.json dist/my-anime-app2/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

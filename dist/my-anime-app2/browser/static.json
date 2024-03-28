@@ -1,0 +1,7 @@
+{
+    "root": "dist/my-anime-app2/browser",
+    "clean_urls": true,
+    "routes": {
+        "/**": "index.html"
+    }
+}
