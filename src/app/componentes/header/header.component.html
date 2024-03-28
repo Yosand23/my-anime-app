@@ -12,10 +12,10 @@
     <div class="opciones"  [class.open]="isOpen" (click)="toogleMenu()" >
       <nav>
         <ul >
-          <li><a href="informacion" >Informacion</a></li>
-          <li><a href="reproductor">Reproductor</a></li>
-          <li><a href="reseñas">Reseñas</a></li>
-          <li><a href="apoyanos">Apoyanos</a></li>
+          <li><a routerLink="informacion" >Informacion</a></li>
+          <li><a routerLink="reproductor">Reproductor</a></li>
+          <li><a routerLink="reseñas">Reseñas</a></li>
+          <li><a routerLink="apoyanos">Apoyanos</a></li>
           <li class="btn-descarga"><a href="assets\descarga\my-anime-app.apk" (click)="actualizarDescarga()">Descargar ahora</a></li>
         </ul>
       </nav>
