@@ -1,0 +1,35 @@
+main{
+    background-color: var(--color-secundario-1);
+    background: radial-gradient(circle, var(--color-secundario-1),var(--color-principal));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info{
+    background-color: var(--color-contraste);
+    padding: 30px 60px;
+    max-width: 600px;
+}
+
+p{
+    color: var(--color-secundario-1);
+    font-family: var(--tipografia-opciones);
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-size: medium;
+}
+
+h1{
+    color: var(--color-principal);
+    font-family: var(--tipografia-titulo);
+    margin-bottom: 20px;
+}
+
+h4{
+    color: var(--color-principal);
+    font-family: var(--tipografia-titulo);
+    margin-bottom: 10px;
+    font-size: larger;
+}

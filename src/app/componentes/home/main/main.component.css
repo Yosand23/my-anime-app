@@ -1,0 +1,33 @@
+.container-main{
+    background-color: var(--color-secundario-1);
+    background: radial-gradient(circle, var(--color-secundario-1),var(--color-principal));
+    padding: 50px;
+    
+}
+.linea-con-texto {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .linea-con-texto::before,
+  .linea-con-texto::after {
+    content: "";
+    flex: 1;
+    border-bottom: 3px solid var(--color-secundario-1);
+    margin: 0 10px;
+  }
+  
+  .texto {
+    white-space: nowrap;
+    color: var(--color-contraste);
+    font-size:x-large;
+    font-family: var(--tipografia-titulo);
+  }
+  
+
+@media (max-width: 900px) {
+    .container-main{
+        padding: 30px;
+    }
+  }

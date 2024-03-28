@@ -1,0 +1,14 @@
+:root {
+    --color-principal: #000000;
+    --color-contraste: #FFFFFF;
+    --color-acento-1: #fa2c07;
+    --color-secundario-1: #333333;
+    --color-secundario-2: #CCCCCC;
+    --color-acento-2: #F74747;
+    --color-acento-3: #FF69B4;
+    --color-acento-4: #AACCFF;
+    --color-acento-5: #90EE90;
+    --tipografia-titulo: 'Lato', sans-serif;
+    --tipografia-opciones: 'Raleway', sans-serif;
+  }
+  

@@ -1,0 +1,62 @@
+<main>
+    <div class="resenas">
+        <h1>Recibimiento de la aplicacion</h1>
+        <div class="info-logo">
+            <div class="logo">
+                <img src="assets/logo.png" alt="">
+            </div>
+            <div class="calificacion">
+                <div class="estrellas">
+                    <div *ngFor="let i of arrayEstrellasCal" class="star-cal"></div>
+                    <div *ngFor="let i of arrayEstrellas" class="star-icon"></div>
+
+                </div>
+                <p>{{estrellas}}.0</p>
+            </div>
+        </div>
+        <div>
+            <h2>{{ numComentarios }} reseñas sobre la app</h2>
+
+        </div>
+        <div class="comentar">
+            <input type="text" placeholder="Ingrese su alias" (input)="validarFormulario()" [(ngModel)]="user_alias">
+            <input type="text" placeholder="Añade un comentario" (input)="validarFormulario()"
+                [(ngModel)]="user_contenido">
+            <div class="opciones">
+                <div class="calificar">
+                    <div class="star-comment" [class.selected]="1<=user_cal" [class.hovered]="1<=cal_preview"
+                        (click)="guardarCal(1)" (mouseenter)="cal_preview=1" (mouseleave)="cal_preview = 0"></div>
+                    <div class="star-comment" [class.selected]="2<=user_cal" [class.hovered]="2<=cal_preview"
+                        (click)="guardarCal(2)" (mouseenter)="cal_preview=2" (mouseleave)="cal_preview = 0"></div>
+                    <div class="star-comment" [class.selected]="3<=user_cal" [class.hovered]="3<=cal_preview"
+                        (click)="guardarCal(3)" (mouseenter)="cal_preview=3" (mouseleave)="cal_preview = 0"></div>
+                    <div class="star-comment" [class.selected]="4<=user_cal" [class.hovered]="4<=cal_preview"
+                        (click)="guardarCal(4)" (mouseenter)="cal_preview=4" (mouseleave)="cal_preview = 0"></div>
+                    <div class="star-comment" [class.selected]="5<=user_cal" [class.hovered]="5<=cal_preview"
+                        (click)="guardarCal(5)" (mouseenter)="cal_preview=5" (mouseleave)="cal_preview = 0"></div>
+                </div>
+                <div class="btn-comentario">
+                    <button [class.activo]="validado" [class.inactivo]="!validado"
+                        (click)="comentar()">Comentar</button>
+                    <button (click)="limpiarFormulario()">Cancelar</button>
+                </div>
+            </div>
+        </div>
+        <div class="caja-rese">
+            <div *ngFor="let com of arrayResenas" class="comentario">
+                <div class="cabezera">
+                    <p>{{com.alias}}</p>
+                    <p class="fecha">{{com.fecha | date}}</p>
+                </div>
+                <div class="contenido">
+                    {{com.contenido}}
+                </div>
+                <div class="botones">
+                    <div class="star"></div>
+                    <p>{{com.calificacion}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</main>

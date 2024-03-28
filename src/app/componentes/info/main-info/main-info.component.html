@@ -1,0 +1,32 @@
+<main>
+    <div class="info-logo">
+        <div class="logo">
+            <img src="assets/logo.png" alt="">
+        </div>
+        <div class="calificacion">
+            <div class="estrellas">
+                <div *ngFor="let i of arrayEstrellasCal" class="star-cal"></div>
+                <div *ngFor="let i of arrayEstrellas" class="star-icon"></div>
+                
+            </div>
+            <p>{{estrellas}}.0</p>
+        </div>
+    </div>
+    <div class="info">
+        <h1>Detalles</h1>
+        <div style="width: 100%;" *ngFor="let elemento of informacion; let ultimo = last">
+            <div class="elemento">
+                <div class="titulo">
+                 {{elemento.titulo}}
+                </div>
+                <div class="contenido">
+                    {{elemento.contenido}}
+                </div>
+             </div>
+             <div *ngIf="!ultimo" class="separador">
+     
+             </div>
+        </div>
+    </div>
+    
+</main>

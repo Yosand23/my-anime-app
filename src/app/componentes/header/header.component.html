@@ -1,0 +1,28 @@
+<header class="header">
+    <a href="">
+      <div class="titulo-logo">
+        <div class="logo">
+          <img src="assets/logo.png" alt="Logo del gato">
+          
+        </div>
+        <h1>My anime app</h1>
+      </div>
+    </a>
+  
+    <div class="opciones"  [class.open]="isOpen" (click)="toogleMenu()" >
+      <nav>
+        <ul >
+          <li><a href="informacion" >Informacion</a></li>
+          <li><a href="reproductor">Reproductor</a></li>
+          <li><a href="reseñas">Reseñas</a></li>
+          <li><a href="apoyanos">Apoyanos</a></li>
+          <li class="btn-descarga"><a href="assets\descarga\my-anime-app.apk" (click)="actualizarDescarga()">Descargar ahora</a></li>
+        </ul>
+      </nav>
+    </div>
+    <button id="hamburgerBtn" class="hamburger" (click)="toogleMenu()" [class.fijo]="isOpen">
+      <span class="hamburger-top" [class.open]="isOpen"></span>
+      <span class="hamburger-middle" [class.open]="isOpen"></span>
+      <span class="hamburger-bottom" [class.open]="isOpen"></span>
+    </button>
+  </header>

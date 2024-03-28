@@ -1,0 +1,74 @@
+<main>
+    <h1>Sobre el Reproductor</h1>
+    <app-seccion *ngFor="let sec of secciones" [seccion]="sec">
+
+    </app-seccion>
+    <h3>Reproductor Local</h3>
+    <div class="info-rep">
+        <div class="imagen">
+            <img src="assets/rep.jpg" alt="">
+        </div>
+        <div class="info">
+            <h4>General</h4>
+            <ul>
+                <li>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ffffff" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+                    Regresar
+                </li>
+                <li>
+                    <svg width="254px" height="254px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L15.586 12l-3.293-3.293a1 1 0 0 1 0-1.414Z" fill="#f5f5f5"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M6.293 7.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L9.586 12 6.293 8.707a1 1 0 0 1 0-1.414Z" fill="#f5f5f5"></path></g></svg>
+                    Siguiente Capitulo
+                </li>
+                <li>
+                    <svg viewBox="-3 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>play</title> <desc>Created with Sketch Beta.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage"> <g id="Icon-Set-Filled" sketch:type="MSLayerGroup" transform="translate(-419.000000, -571.000000)" fill="#fffafa"> <path d="M440.415,583.554 L421.418,571.311 C420.291,570.704 419,570.767 419,572.946 L419,597.054 C419,599.046 420.385,599.36 421.418,598.689 L440.415,586.446 C441.197,585.647 441.197,584.353 440.415,583.554" id="play" sketch:type="MSShapeGroup"> </path> </g> </g> </g></svg>
+                    Inicia o pausa el video
+                </li>
+                <li>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFXklEQVR4nO1aW4gcRRQt34qIGt9RP3xEJCYKiqCIqBAMEUUTNGp+jG5E0WA+sqvih4isGyVkyb8fQRR/9cM3CL42ZmMQ8hejRIlBJQkxOzPd59zeuCW3ZyZ013b3TM92945xDjTMbnXXrdP3dtW5t8qYAQYYYIAB/qeo1+uXiMhjAmwV8jMBfiJwhIAQCPS3AHtbbVtFZHWj0bjU/JdgrV0AYD2BSSFt3ovADMnvtA9r7bmmX+F53kIBxgk0eiGaQr6mfdpa7ULTL7DWnkZypEiiCcSPktxorT3FtS++/4SIrKmELMlFBH7MGOgxkhMCjJJcRXKxtfZ8fUnW2lP1t4gsIblSgE0kd2hIp/ZHbgdw7XGywGstO6yC7IMEplIG9xvJYQ3zvP16nncFyVeEPJDyEo8AWN4m275MmRBgnXovYUB/CTCkHpyrDWvt6SQ3kDycQPof93+mZLIzCeH2jrX2vFImQ/LLTt+5KTGMjzlvWwR40pQIa+3JGuZJni2NMJsTVOyb1ZkZwL2mArjfbKmErS49zmysnu0XsoUTJjkyy0jJYZyHbKGEPc9b6IoKnaBMBRBgbbfipEij4+7So4KhMANZtkXWqKjoqMTIbwpLBOhKRmDInKgAsN55m/tVEJgTFQR2OqEzXIYda+1ZgefdBmCZiNyo666Zj+SdEUWlgqMbbWytPUmAp4X8s5Xs67Ur5d6zU1LKP7QPUyVEKxVx7050mRN/krCE7XXvtdaeQfLrzAkJGDNVQZplmajx0cz7RW4KSzbJA59FmOSrzgv9qvW/fZGomgl8/85SibYh5KfOgFaaDJB8KELwIwK70wi3vHsoQmy3tfZMbQNwDQE/8uyHpgoI+YtDeHEnwlqZaCswIb9IIxz4/l1O3xtitoEPIi8DRaSbHeHmobomd7j/et/3r2z/nUWY5AvRvgPfv91pfzn2SYgs6WK897WKBgdIrujM0EGY9sUJ51p/swgL8Hq072jZptU+5LTf04W9XyPP7DN9RnjUIXTVrMJcvH1Zli2dE2KfSC81LuYMaRcdQnpjLKSD4FanfdgJ6ZuzbGkZ15kTDuWka3TAPztGbyiQ8Apn2VrrtG+LCh4VKJm2RJZ2WgZ7WZZWFUVYdxRiSw/5eaTtnGh0kfy2ky2SDzuEP84z1jTh8YYpiLCC5NtO/5sB3B17rhlZj3e0BWxy+hrPM9YQIvKo4+HtpkDCtla7SMjfE5VZRMCoNu9ka9Y+lsgjJi/q9frFvSQP3RI+rqrI71M21LZpFtVV4T5SzdTfPe9FkdzheHkkx7OLgiC4Ra8s4aCpYOD7d4R1M2As3Hkkr8th56W8SU4qADzfzwUAlZy6rRNb4oBniy7xrDN9AiXnfAq1OdfbBNjihMxhOzV1gZlnhM4gDzrOeHPOHTcajcsI1B3S75p5BoH3He9O6URbTOeMS8H5Du0AeGbWzO6kmEVstexy3mig+7SmYqgsVdvOWCZ1g71QQ2hWIo4mbKYtr5hsfBcE+NvNtoo0+ACBadfTVYS3hnGCZ6c18S/VsABPJW6IA+/lTSG7ga4I7gTVVmOaN5sqIE3S0wkTx0H1RBHiRPvQdTZa7It6tjKybZC83/2mo4qM5Iue511uejvUonJxf1Lf+s2WHsZpAHA1gR/Ssh0V8qEeB8bCnFVkqYa9eq91LdCtlbBNjy0Bk1nHGrS9tAmqW+hyEJ62ST/CNOdLZ2b1euFLz5wPkgKbXVVWwNHDtwpTUGVAxXsAPKd5btapugySmgtP6IRV1cZ7YQirGiKrw1MEuskG7NHko3V8WMLaFbCn1bZFKxV9dZB0gAEGGGAAUy3+BS20Vtw0Gkq5AAAAAElFTkSuQmCC">
+                    Adelanta 10 segundos
+                </li>
+                <li>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFSklEQVR4nO1aS4gcVRR9/qIiIhm/8bPwi5BEQREUERECkmBAoya4UuOIn/gl8beRICbxw4zuXWQRceNCF/ETV4pMksFssosRokZRzAQz011d59xK4pPbXSPVd6qruqeramZiHyjo7tf1bp269913P8+5AQYYYIAB/qcIgmCJiKwV4EMhvxbgIIG/CUQERD8L8GM89oGIrKvX65e4hQTv/QUAnic5RuAfIX0vl95Dci+ADd77oTkjIsDmrHFfq12sWiJQ65VkBvm6ACNqKa5qiD5ECmnv/RkkNxGYKopoGnGSG733Z1VLmO2kAVxHck/Gg55sjgPbSD4gIsu894u992fqw+tnEVlKco0AW0juJnAiY759AK6tljBbpAHcS+BYh4f7neQbjUbjyl7lNBqNy0m+IuSvHUhPklztyoakaG/Gb+SEOizv/aJ+5akFCDAs5F8pso8LsN6VCclba8Cn6riKlqtmT3JHmjcvlbRkr9OXShM8LR8Y1v3baprkfeUIZKZ2M7esohD7jcCuaQDXzIVJb3bVkbaa/kE9f6GCpJs9syLSsTOzDvPlYoWwy0ChItIEPjZargVBcFlhAqSX6Ah4x5UMjbNJHjFy33OnMiLgKRuC6jbmTlV4DU7IX5KkI+AZN9/hvT83ajRuB7BCRG7y3p/e7b0kXzPOa4+rEt770wR4Usg/42Rfr30d/nueAKN2bxXyD52jG3mNRuOKZJirEVgZEV/HwF+AL1Oc2EH7X+/92SS/y3F+W10X0IJB230ia13ZEJGbmyWb9AefQZjkm8YUv41/O5TUVhSGd+XKBrYZeaOlEZ0GyfsTAncS2N+JcKzdiQSx/d77c3RM810CYeLez10OSD5oCH/hqiBMYFKAx/W7kN90IhyF4d1Guy8mxwX4LPEykFfp0MJCnkXlguQqTeTjZH5lF/+/MQzDq6a/ZxEm+ULbVhKGd5jx182aXJYl29dqF5kXOOF6hZA/JyY5NIv7OxIW4K3kA2qpyIw/YcbvyZKlS8QEIJxNrCrJSXqtYuQQftsQurptPAwfNeMryidMHjWEe6oR55j0xjaTjqLbzPgmY9K3VGHSPxmhSwskvNI4mcfM+PaEtk5ogJIpS2R5305LyK/MW1tTFGHtTrRtPeSuxNj5Sesi+X2eLJIP9b0tSasflJxkS1GE44f8yMz/frxd7TKW9UglgYeIrDMa3l0k4WZrhvyt7UFnRmg7NTbPk0Vg3Lykh3vl67SLl2yG6VrSWLkowv9FVSmdi7ihtl2zqDw5Wuw3ycNJdWJuNqAJyrUj0MO910dRdKteWYGDpoJRGN7Z7DYAWwE8R/KGPtLDMTdbANhg3v7hIroKJRcAnu5nwqEZuSow7OYJlJxZCrW+SzwCjBiTOeqnpi50c4wORbz+i4dBECxpNqbbSe9wcwwCnxjtThV2XIImFJxr07bVyrQUs2/nQGCfeaORtj1cxdCwNKXVMl54qwWtSsSkERRUSToma5tpx2y2VaTA1c1mtNF0FeatZtyhXbqqVMECrE87jqS9njKOGemOYB3UdDSmebOrAtIifTzFcRxRTRR05GGR7rPJYl9Ss5WRnYZ23u2aTkZkJF/VIrnrEc3YuBUuHk6bW9ds6WbcCdp512Z0znGIvRojN3NWkeVq9qq9+BrS1kpzTI82AeNph2WS3rg0B9UtdDvQPbDkg2mBar3wracf1Ov1SzWJt1FZn0RrArw7rw+ceu8XR8Czmuf2cbh0TB3Wguv1eq1qtI4PjzabbMABTT7io8PSrF0BB+KxEa1UzDp5H2CAAQYYwC18/AuVQlw/zQ0wfgAAAABJRU5ErkJggg=="> 
+                    Regresa 10 segundos
+                </li>
+                <li>
+                    <svg viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M512 1024C229.7 1024 0 794.3 0 512S229.7 0 512 0s512 229.7 512 512-229.7 512-512 512z m0-938.7C276.7 85.3 85.3 276.7 85.3 512S276.7 938.7 512 938.7 938.7 747.3 938.7 512 747.3 85.3 512 85.3z" fill="#f7f9fd"></path><path d="M640 682.7c-9.6 0-19.3-3.2-27.3-9.9l-128-106.7c-9.7-8.1-15.4-20.1-15.4-32.8V384c0-23.6 19.1-42.7 42.7-42.7s42.7 19.1 42.7 42.7v129.4l112.6 93.9c18.1 15.1 20.5 42 5.5 60.1-8.5 10-20.6 15.3-32.8 15.3z" fill="#edeef3"></path></g></svg>
+                    Salta el opening
+                </li>
+                <li>
+                    <svg fill="#fcfcfc" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M19.91,15.51H15.38a1,1,0,0,0,0,2h2.4A8,8,0,0,1,4,12a1,1,0,0,0-2,0,10,10,0,0,0,16.88,7.23V21a1,1,0,0,0,2,0V16.5A1,1,0,0,0,19.91,15.51ZM12,2A10,10,0,0,0,5.12,4.77V3a1,1,0,0,0-2,0V7.5a1,1,0,0,0,1,1h4.5a1,1,0,0,0,0-2H6.22A8,8,0,0,1,20,12a1,1,0,0,0,2,0A10,10,0,0,0,12,2Z"></path></g></svg>
+                    Reinicia el video
+                </li>
+            </ul>
+            <h4>En Movil</h4>
+            <ul>
+                <li>
+                    <b>Double tap en la parte derecha:</b> Adelanta 10 segundos.
+                    
+                </li>
+                <li>
+                    <b>Double tap en la parte izquierda:</b> Retrocede 10 segundos.
+                </li>
+                <li>
+                    <b>Mantener el tap:</b> Inicia o pausa la reproducción.
+                </li>
+            </ul>
+            <h4>En TV</h4>
+            <ul>
+                <li>
+                    <b>Boton direccion derecha:</b> Adelanta 10 segundos.
+                    
+                </li>
+                <li>
+                    <b>Boton direccion izquierda:</b> Retrocede 10 segundos.
+                </li>
+                <li>
+                    <b>Boton select o play/pause:</b> Inicia o pausa la reproducción.
+                </li>
+                <li>
+                    <b>Boton direccion arriba o abajo:</b> Muestra los botones.
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>

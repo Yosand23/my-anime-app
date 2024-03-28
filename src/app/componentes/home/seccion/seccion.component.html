@@ -1,0 +1,20 @@
+<section class="container" [class.reversed]="seccion.reversed">
+    <div class="sec-info">
+        
+        <h1>
+            {{seccion.titulo}}
+        </h1>
+        <p *ngFor="let parrafo of seccion.parrafos">
+          {{parrafo}}
+        </p>
+        
+    </div>
+
+    <div class="sec-imagen">
+        <div class="imagen">
+            <img [src]="seccion.imagen" alt="">
+        </div>
+        
+    </div>
+</section>
+
