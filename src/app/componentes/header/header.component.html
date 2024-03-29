@@ -9,18 +9,18 @@
       </div>
     </a>
   
-    <div class="opciones"  [class.open]="isOpen" (click)="toogleMenu()" >
+    <div class="opciones"  [class.open]="isOpen" (click)="toggleMenu()" >
       <nav>
         <ul >
-          <li><a routerLink="informacion" >Informacion</a></li>
+          <li><a routerLink="informacion" >Información</a></li>
           <li><a routerLink="reproductor">Reproductor</a></li>
           <li><a routerLink="reseñas">Reseñas</a></li>
-          <li><a routerLink="apoyanos">Apoyanos</a></li>
+          <li><a routerLink="apoyanos">Apoyarnos</a></li>
           <li class="btn-descarga"><a href="assets\descarga\my-anime-app.apk" (click)="actualizarDescarga()">Descargar ahora</a></li>
         </ul>
       </nav>
     </div>
-    <button id="hamburgerBtn" class="hamburger" (click)="toogleMenu()" [class.fijo]="isOpen">
+    <button id="hamburgerBtn" class="hamburger" (click)="toggleMenu()" [class.fijo]="isOpen">
       <span class="hamburger-top" [class.open]="isOpen"></span>
       <span class="hamburger-middle" [class.open]="isOpen"></span>
       <span class="hamburger-bottom" [class.open]="isOpen"></span>

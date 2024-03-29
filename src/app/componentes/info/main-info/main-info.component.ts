@@ -13,7 +13,7 @@ export class MainInfoComponent {
   informacion:any[];
   descargas:number;
 
-  constructor(private serice:FirebaseService){
+  constructor(private service:FirebaseService){
     this.estrellas =3;
     this.descargas =0;
     this.arrayEstrellasCal = Array(this.estrellas);
@@ -35,7 +35,7 @@ export class MainInfoComponent {
         contenido:"23.7 MB"
       },
       {
-        titulo: "Instalacion: ",
+        titulo: "Instalación: ",
         contenido:"Sencilla"
       },
       {
@@ -43,7 +43,7 @@ export class MainInfoComponent {
         contenido:"APK"
       },
       {
-        titulo: "Deteccion: ",
+        titulo: "Detección: ",
         contenido:"Seguro"
       },
       {
@@ -51,7 +51,7 @@ export class MainInfoComponent {
         contenido:"1.1.0"
       },
       {
-        titulo:"Fecha de actualización: ",
+        titulo:"Fecha actualización: ",
         contenido:"23-03-2024"
       },
       {
@@ -80,7 +80,7 @@ export class MainInfoComponent {
     return men;
   }
   refrescarEstrellas(){
-    this.serice.getCalificacion().then(data=>{
+    this.service.getCalificacion().then(data=>{
       
       this.estrellas = data;
       this.arrayEstrellasCal = Array(this.estrellas);
@@ -89,7 +89,7 @@ export class MainInfoComponent {
   }
 
   refrescarDescargas(){
-    this.serice.getDescargas().then(data=>{
+    this.service.getDescargas().then(data=>{
       this.descargas = data;
       this.refreshInfo();
     });

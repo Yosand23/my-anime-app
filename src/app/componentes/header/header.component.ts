@@ -8,18 +8,18 @@ import { FirebaseService } from '../../services/firebase.service';
 })
 export class HeaderComponent {
   isOpen = false;
-  constructor(private serice:FirebaseService){
+  constructor(private service:FirebaseService){
 
   }
 
   actualizarDescarga(){
-    this.serice.actualizarDescargas().then(
+    this.service.actualizarDescargas().then(
       data=>console.log(data)
       
     );
   }
 
-  toogleMenu(){
+  toggleMenu(){
     this.isOpen = !this.isOpen;
   }
 }

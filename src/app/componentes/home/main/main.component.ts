@@ -12,7 +12,7 @@ export class MainComponent {
       parrafos:[
         "Ofrecemos una amplia selección de servidores para que puedas disfrutar de tus animes y videos favoritos.",
         "Accedemos a las mejores páginas web para proporcionarte el contenido más reciente y variado. Analizamos sitios web de renombre que son conocidos por su extenso catálogo de animes y videos de alta calidad. ",
-        "Al seleccionar una pagina como servidor, podras acceder a todo su catalogo y disfrutar de su contenido."
+        "Al seleccionar una pagina como servidor, podrás acceder a todo su catalogo y disfrutar de su contenido."
       ],
       titulo:"Servidores",
       imagen:"assets/servers.jpg"
@@ -21,8 +21,8 @@ export class MainComponent {
       titulo:"Explorar",
       imagen:"assets/explore.jpg",
       parrafos:[
-        "Adentrate y explora el extenso catalago que ofrece cada servidor para encontrar tus animes favoritos.",
-        "Ademas, puedes filtrar el catalogo por los distintos generos que ofrece cada servidor y encontrar nuevos animes en dicho genero.",
+        "Adéntrate y explora el extenso catálogo que ofrece cada servidor para encontrar tus animes favoritos.",
+        "Ademas, puedes filtrar el catalogo por los distintos géneros que ofrece cada servidor y encontrar nuevos animes en dicho genero.",
         "Navega entre las distintas paginas de cada genero de manera sencilla al seleccionar el numero de pagina que se muestra."
       ],
       reversed:false

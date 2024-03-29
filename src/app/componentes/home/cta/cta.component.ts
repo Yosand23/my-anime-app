@@ -7,11 +7,11 @@ import { FirebaseService } from '../../../services/firebase.service';
   styleUrls: ['./cta.component.css']
 })
 export class CtaComponent {
-  constructor(private serice:FirebaseService){
+  constructor(private service:FirebaseService){
 
   }
 
   actualizarDescarga(){
-    this.serice.actualizarDescargas().then();
+    this.service.actualizarDescargas().then();
   }
 }
