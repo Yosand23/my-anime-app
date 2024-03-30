@@ -12,6 +12,8 @@ export class CtaComponent {
   }
 
   actualizarDescarga(){
-    this.service.actualizarDescargas().then();
+    this.service.actualizarDescargas().then(
+      
+    );
   }
 }

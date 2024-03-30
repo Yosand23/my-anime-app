@@ -52,10 +52,12 @@ export class FirebaseService {
   }
 
   async actualizarDescargas(){
-    const q = query(collection(getFirestore(initializeApp(environment.firebase)), "descargas"),orderBy('timestamp', 'desc'));
-    const querySnapshot = (await getDocs(q)).docs[0];
+    const q = query(collection(getFirestore(initializeApp(environment.firebase)), "descargas"));
+    const querySnapshot = (await getDocs(q));
+    console.log(querySnapshot);
+    
     let can = await this.getDescargas();
-    await updateDoc(doc(this.firestore,"descargas",querySnapshot.id), {cant:can+1});
+    await updateDoc(doc(this.firestore,"descargas",querySnapshot.docs[0].id), {cant:can+1});
     return await this.getDescargas();
   }
 }
