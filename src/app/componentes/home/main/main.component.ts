@@ -15,7 +15,8 @@ export class MainComponent {
         "Al seleccionar una pagina como servidor, podrás acceder a todo su catalogo y disfrutar de su contenido."
       ],
       titulo:"Servidores",
-      imagen:"assets/servers.jpg"
+      imagen:"assets/servers.jpg",
+      alt:"Servidores de la aplicación"
     },
     {
       titulo:"Explorar",
@@ -25,7 +26,8 @@ export class MainComponent {
         "Ademas, puedes filtrar el catalogo por los distintos géneros que ofrece cada servidor y encontrar nuevos animes en dicho genero.",
         "Navega entre las distintas paginas de cada genero de manera sencilla al seleccionar el numero de pagina que se muestra."
       ],
-      reversed:false
+      reversed:false,
+      alt:"Vista del explorador del catalogo de la aplicación"
     },
     {
       titulo:"Favoritos",
@@ -34,7 +36,8 @@ export class MainComponent {
         "Ahora puedes guardar tus animes favoritos con un solo clic. Nuestra nueva función de Favorito te permite acceder rápidamente a tus series y episodios preferidos sin tener que buscarlos nuevamente. ¡Disfruta de tus contenidos favoritos en cualquier momento y en cualquier lugar!",
         "¿Tienes una lista de animes que adoras? Con nuestra función de Favoritos, puedes organizar fácilmente tus series y películas de anime en una lista personalizada. Mantén tus preferencias al día y accede rápidamente a tus contenidos favoritos sin perder tiempo buscándolos.",
         ],
-      reversed:true
+      reversed:true,
+      alt:"Vista de tus animes favoritos."
     },
     {
       titulo:"Historial",
@@ -44,7 +47,8 @@ export class MainComponent {
         "¿Quieres ver primero lo más reciente? Con nuestra función de ordenamiento, puedes cambiar fácilmente el orden de tu historial para ver primero los animes y episodios más recientes. ",
         "Nunca tendrás que preocuparte por perder el hilo de tus animes favoritos. Gracias a nuestra función de continuación de reproducción, cada vez que vuelvas a ver un anime, comenzarás exactamente donde lo dejaste. "
       ],
-      reversed:false
+      reversed:false,
+      alt:"Vista del historial de la aplicación"
     }
   ]
   

@@ -14,6 +14,7 @@ export class MainRepComponent {
         titulo:"Vista del capitulo",
         imagen:"assets/vistaCap.jpg",
         reversed:false,
+        alt:"Vista del capitulo de la aplicación",
         parrafos:[
           "Al inicio cargaran los idiomas disponibles, al seleccionar un idioma, este se pondrá de color naranja y se cargaran los servidores de video. Por defecto el idioma principal que cargara es latino.",
           "Los servidores de video cargaran automáticamente al ser de un solo idioma. Al seleccionar un servidor de video te llevara a la pagina de ese servidor, este se reproducirá automáticamente en la mayoría de los casos, si no debera iniciarlo manualmente.",
