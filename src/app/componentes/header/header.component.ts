@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FirebaseService } from '../../services/firebase.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,15 +9,16 @@ import { FirebaseService } from '../../services/firebase.service';
 })
 export class HeaderComponent {
   isOpen = false;
-  constructor(private service:FirebaseService){
+  constructor(private service:FirebaseService, private router:Router){
 
   }
 
   actualizarDescarga(){
     this.service.actualizarDescargas().then(
-      data=>console.log(data)
       
+
     );
+    this.router.navigate(["apoyanos"]);
   }
 
   toggleMenu(){
