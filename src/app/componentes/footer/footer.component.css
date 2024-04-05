@@ -8,7 +8,11 @@ footer{
     color: var(--color-secundario-2);
     font-family: var(--tipografia-opciones);
 }
-
+svg{
+    margin-left: 30px ;
+    margin-right: -10px;
+    width: 20px;
+}
 a{
     color: var(--color-secundario-2);
     font-family: var(--tipografia-opciones);
