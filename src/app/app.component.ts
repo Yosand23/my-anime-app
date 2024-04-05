@@ -12,7 +12,7 @@ export class AppComponent {
   showTelepronter:boolean;
 
   constructor(firebase:FirebaseService){
-    this.notificacion = ` <p>Estamos trabajando en nueva version de paga, </p>
+    this.notificacion = ` <p>Estamos trabajando en una nueva version de paga, </p>
     <a href="https://t.me/+mSdA43jjlTRkNzNh"> ingresa al canal</a>
     <p>para dejar pedidos o recomendaciones para esta nueva version y para notificarte cuando este desplegada, u </p>
     
