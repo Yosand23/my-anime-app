@@ -27,6 +27,16 @@ export class FirebaseService {
     return comentarios;
   }
 
+  async getActualizacion(){
+    const q = query(collection(getFirestore(initializeApp(environment.firebase)), "actualizacion"));
+    const querySnapshot = await getDocs(q);
+    if(querySnapshot.size >0){
+      return querySnapshot.docs[0].data();
+    }else{
+      return 0;
+    }
+  }
+
   async getCalificacion(){
     let comentarios = await this.getComments();
     let cal = 0;
@@ -54,7 +64,6 @@ export class FirebaseService {
   async actualizarDescargas(){
     const q = query(collection(getFirestore(initializeApp(environment.firebase)), "descargas"));
     const querySnapshot = (await getDocs(q));
-    console.log(querySnapshot);
     
     let can = await this.getDescargas();
     await updateDoc(doc(this.firestore,"descargas",querySnapshot.docs[0].id), {cant:can+1});

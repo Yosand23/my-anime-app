@@ -17,7 +17,7 @@ export class AppComponent {
     <p>para dejar pedidos o recomendaciones para esta nueva version y para notificarte cuando este desplegada, u </p>
     
         `;
-        this.showTelepronter = true;
+        this.showTelepronter = false;
   }
 
   ocultarTelepronter(){

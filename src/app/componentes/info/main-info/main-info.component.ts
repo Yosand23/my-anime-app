@@ -12,6 +12,8 @@ export class MainInfoComponent {
   arrayEstrellas:number[];
   informacion:any[];
   descargas:number;
+  fecha:any;
+  version = 1;
 
   constructor(private service:FirebaseService){
     this.estrellas =3;
@@ -22,6 +24,7 @@ export class MainInfoComponent {
     this.refrescarEstrellas();
     this.refrescarDescargas();
     this.refreshInfo();
+    this.validarFecha();
   }
 
   refreshInfo(){
@@ -32,7 +35,7 @@ export class MainInfoComponent {
       },
       {
         titulo: "Tamaño: ",
-        contenido:"23.7 MB"
+        contenido:"24.9 MB"
       },
       {
         titulo: "Instalación: ",
@@ -48,11 +51,11 @@ export class MainInfoComponent {
       },
       {
         titulo: "Version: ",
-        contenido:"1.1.0"
+        contenido:'2.'+this.version+'.0'
       },
       {
         titulo:"Fecha actualización: ",
-        contenido:"23-03-2024"
+        contenido:this.fecha
       },
       {
         titulo:"Descargas:",
@@ -78,6 +81,14 @@ export class MainInfoComponent {
       men = (this.descargas/1000000).toFixed(1)+ " M";
     }
     return men;
+  }
+
+  validarFecha(){
+    this.service.getActualizacion().then((data:any)=>{
+      this.fecha = data["fecha_act"].toDate().toLocaleDateString();
+      this.version = data["fecha"];
+      this.refreshInfo();
+    });
   }
   refrescarEstrellas(){
     this.service.getCalificacion().then(data=>{

@@ -8,10 +8,16 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./cta.component.css']
 })
 export class CtaComponent {
+  version= 0;
   constructor(private service:FirebaseService, private router:Router){
-    
+    this.validarFecha();
   }
 
+  validarFecha(){
+    this.service.getActualizacion().then((data:any)=>{
+      this.version = data["fecha"];
+    });
+  }
   actualizarDescarga(){
     this.service.actualizarDescargas().then(
       

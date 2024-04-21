@@ -21,23 +21,35 @@
 
   
   .informacion {
-    width: 60%;
+    width: 40%;
     margin-right:40px;
     margin-bottom: 40px;
     line-height: 2;
   }
   
-  .cuentas {
-    border: 1px solid #ccc;
-    padding: 30px 60px; 
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   li{
-    margin: 20px 0;
+    margin: 5px 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border: 2px solid var(--color-contraste);
+    transition: all 0.3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: var(--color-principal);
+    img, svg{
+      height: 40px;
+      color: var(--color-contraste);
+    }
+    p{
+      color: var(--color-contraste);
+      padding-left: 10px;
+    }
+    &:hover{
+      background-color: var(--color-secundario-1);
+      border: 2px solid var(--color-secundario-2);
+    }
   }
 
   .principal{
@@ -45,7 +57,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-bottom:60px;
-    align-items: center;
+    align-items: start;
     justify-content: center;
   }
   
@@ -54,7 +66,6 @@
         width: 100%;
         margin: 0;
         margin-bottom: 60px;
-        
     }
     .principal{
         align-items: center;
