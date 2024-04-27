@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FirebaseService } from '../../../services/firebase.service';
 import { NavigationEnd, Router } from '@angular/router';
+import { Timestamp } from 'firebase/firestore';
 
 @Component({
   selector: 'app-cta',
@@ -11,6 +12,11 @@ export class CtaComponent {
   version= 0;
   constructor(private service:FirebaseService, private router:Router){
     this.validarFecha();
+    this.ingresarUser();
+  }
+
+  ingresarUser(){
+    
   }
 
   validarFecha(){

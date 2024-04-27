@@ -61,6 +61,10 @@ export class FirebaseService {
     return await addDoc(col(this.firestore, "comentarios"), comentario);
   }
 
+  async addUser(user: any) {
+    return await addDoc(col(this.firestore, "usuarios"), user);
+  }
+
   async actualizarDescargas(){
     const q = query(collection(getFirestore(initializeApp(environment.firebase)), "descargas"));
     const querySnapshot = (await getDocs(q));
