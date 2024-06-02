@@ -8,6 +8,7 @@ import { MainResenasComponent } from './componentes/reseñas/main-resenas/main-r
 import { MainApoyenosComponent } from './componentes/apoyenos/main-apoyenos/main-apoyenos.component';
 import { DmcaComponent } from './componentes/legal/dmca/dmca.component';
 import { InformacionComponent } from './componentes/legal/informacion/informacion.component';
+import { DescargarComponent } from './componentes/descargar/descargar.component';
 
 const routes: Routes = [
   { path: '', component:  MainComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'apoyanos', component:  MainApoyenosComponent},
   { path: 'legal/dmca', component:  DmcaComponent},
   { path: 'legal/informacion', component:  InformacionComponent},
+  { path: 'descargar', component:  DescargarComponent},
   {path: '**',redirectTo:''}
 ];
 

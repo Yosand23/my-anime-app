@@ -20,6 +20,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { DmcaComponent } from './componentes/legal/dmca/dmca.component';
 import { InformacionComponent } from './componentes/legal/informacion/informacion.component';
 import { FormsModule } from '@angular/forms';
+import { DescargarComponent } from './componentes/descargar/descargar.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     DmcaComponent,
     InformacionComponent,
+    DescargarComponent,
   ],
   imports: [
     BrowserModule,

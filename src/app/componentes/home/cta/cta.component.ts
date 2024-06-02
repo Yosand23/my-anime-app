@@ -24,11 +24,4 @@ export class CtaComponent {
       this.version = data["fecha"];
     });
   }
-  actualizarDescarga(){
-    this.service.actualizarDescargas().then(
-      
-
-      );
-      this.router.navigate(['apoyanos']);
-  }
 }
