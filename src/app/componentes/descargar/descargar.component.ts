@@ -23,10 +23,9 @@ export class DescargarComponent {
       this.version = data["fecha"];
     });
   }
-  actualizarDescarga(){
-    this.service.actualizarDescargas().then(
-      
-
+  actualizarDescarga(pos:number){
+    this.service.actualizarDescargas(pos).then(
+    
       );
       this.router.navigate(['apoyanos']);
   }

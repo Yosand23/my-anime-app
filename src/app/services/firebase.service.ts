@@ -46,11 +46,11 @@ export class FirebaseService {
     return Math.round(cal/comentarios.length);
   }
 
-  async getDescargas(){
+  async getDescargas(pos:number){
     const q = query(collection(getFirestore(initializeApp(environment.firebase)), "descargas"));
     const querySnapshot = await getDocs(q);
     if(querySnapshot.size >0){
-      return querySnapshot.docs[0].data()["cant"];
+      return querySnapshot.docs[pos].data()["cant"];
     }else{
       return 0;
     }
@@ -65,12 +65,12 @@ export class FirebaseService {
     return await addDoc(col(this.firestore, "usuarios"), user);
   }
 
-  async actualizarDescargas(){
+  async actualizarDescargas(pos:number){
     const q = query(collection(getFirestore(initializeApp(environment.firebase)), "descargas"));
     const querySnapshot = (await getDocs(q));
     
-    let can = await this.getDescargas();
-    await updateDoc(doc(this.firestore,"descargas",querySnapshot.docs[0].id), {cant:can+1});
-    return await this.getDescargas();
+    let can = await this.getDescargas(pos);
+    await updateDoc(doc(this.firestore,"descargas",querySnapshot.docs[pos].id), {cant:can+1});
+    return await this.getDescargas(pos);
   }
 }

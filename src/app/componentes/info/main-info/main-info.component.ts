@@ -7,23 +7,21 @@ import { FirebaseService } from '../../../services/firebase.service';
   styleUrls: ['./main-info.component.css']
 })
 export class MainInfoComponent {
-  estrellas:number;
-  arrayEstrellasCal:number[];
-  arrayEstrellas:number[];
-  informacion:any[];
-  descargas:number;
+  estrellas:number = 3;
+  arrayEstrellasCal:number[] =  Array(this.estrellas);
+  arrayEstrellas:number[] = Array(5-this.estrellas);
+  informacion:any[] = [];
+  informacionMovil:any[]=[];
+  descargas:number = 0;
+  descargasMovil:number = 0;
   fecha:any;
   version = 1;
 
   constructor(private service:FirebaseService){
-    this.estrellas =3;
-    this.descargas =0;
-    this.arrayEstrellasCal = Array(this.estrellas);
-    this.arrayEstrellas = Array(5-this.estrellas);
-    this.informacion = [];
+
     this.refrescarEstrellas();
     this.refrescarDescargas();
-    this.refreshInfo();
+
     this.validarFecha();
   }
 
@@ -59,11 +57,53 @@ export class MainInfoComponent {
       },
       {
         titulo:"Descargas:",
-        contenido:this.validarDescargas()
+        contenido:this.validarDescargas(this.descargas)
       },
       {
         titulo:"Plataforma: ",
-        contenido:"Movil - Android TV"
+        contenido:"Móvil - Android TV"
+      },
+      {
+        titulo:"OS: ",
+        contenido:"Android"
+      }
+    ];
+    this.informacionMovil = [
+      {
+        titulo: "Nombre: ",
+        contenido:"My anime app"
+      },
+      {
+        titulo: "Tamaño: ",
+        contenido:"55.6 MB"
+      },
+      {
+        titulo: "Instalación: ",
+        contenido:"Sencilla"
+      },
+      {
+        titulo: "Tipo Archivo: ",
+        contenido:"APK"
+      },
+      {
+        titulo: "Detección: ",
+        contenido:"Seguro"
+      },
+      {
+        titulo: "Version: ",
+        contenido:'2.'+this.version+'.0'
+      },
+      {
+        titulo:"Fecha actualización: ",
+        contenido:this.fecha
+      },
+      {
+        titulo:"Descargas:",
+        contenido:this.validarDescargas(this.descargasMovil)
+      },
+      {
+        titulo:"Plataforma: ",
+        contenido:"Móvil"
       },
       {
         titulo:"OS: ",
@@ -72,13 +112,13 @@ export class MainInfoComponent {
     ];
   }
 
-  validarDescargas(){
-    let men = this.descargas+"";
-    if(this.descargas>1000){
-      men = (this.descargas/1000).toFixed(1) + " k";
+  validarDescargas(descargas:number){
+    let men = descargas+"";
+    if(descargas>1000){
+      men = (descargas/1000).toFixed(1) + " k";
     }
-    if(this.descargas>1000000){
-      men = (this.descargas/1000000).toFixed(1)+ " M";
+    if(descargas>1000000){
+      men = (descargas/1000000).toFixed(1)+ " M";
     }
     return men;
   }
@@ -92,17 +132,15 @@ export class MainInfoComponent {
   }
   refrescarEstrellas(){
     this.service.getCalificacion().then(data=>{
-      
       this.estrellas = data;
       this.arrayEstrellasCal = Array(this.estrellas);
       this.arrayEstrellas = Array(5-this.estrellas);
     });
   }
 
-  refrescarDescargas(){
-    this.service.getDescargas().then(data=>{
-      this.descargas = data;
-      this.refreshInfo();
-    });
+  async refrescarDescargas(){
+    this.descargas = await this.service.getDescargas(0);
+    this.descargasMovil = await this.service.getDescargas(1);
+    this.refreshInfo();
   }
 }

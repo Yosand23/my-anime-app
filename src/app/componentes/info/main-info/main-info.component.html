@@ -13,8 +13,23 @@
         </div>
     </div>
     <div class="info">
-        <h1>Detalles</h1>
+        <h1>Detalles Version TV</h1>
         <div style="width: 100%;" *ngFor="let elemento of informacion; let ultimo = last">
+            <div class="elemento">
+                <div class="titulo">
+                 {{elemento.titulo}}
+                </div>
+                <div class="contenido">
+                    {{elemento.contenido}}
+                </div>
+             </div>
+             <div *ngIf="!ultimo" class="separador">
+     
+             </div>
+        </div>
+        <br><br>
+        <h1>Detalles Móvil</h1>
+        <div style="width: 100%;" *ngFor="let elemento of informacionMovil; let ultimo = last">
             <div class="elemento">
                 <div class="titulo">
                  {{elemento.titulo}}

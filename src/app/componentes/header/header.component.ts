@@ -9,17 +9,6 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   isOpen = false;
-  constructor(private service:FirebaseService, private router:Router){
-
-  }
-
-  actualizarDescarga(){
-    this.service.actualizarDescargas().then(
-      
-
-    );
-    this.router.navigate(["apoyanos"]);
-  }
 
   toggleMenu(){
     this.isOpen = !this.isOpen;
